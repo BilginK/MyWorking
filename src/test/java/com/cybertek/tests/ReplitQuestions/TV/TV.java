@@ -1,4 +1,4 @@
-package ReplitQuestions.TV;
+package com.cybertek.tests.ReplitQuestions.TV;
 
 public class TV {
 

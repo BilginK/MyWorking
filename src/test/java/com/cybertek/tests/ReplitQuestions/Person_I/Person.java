@@ -1,4 +1,4 @@
-package ReplitQuestions.Person_I;
+package com.cybertek.tests.ReplitQuestions.Person_I;
 
 public class Person {
     private String firstName, lastName;

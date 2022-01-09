@@ -1,4 +1,4 @@
-package ReplitQuestions.Person_I;
+package com.cybertek.tests.ReplitQuestions.Person_I;
 
 import java.util.Scanner;
 
