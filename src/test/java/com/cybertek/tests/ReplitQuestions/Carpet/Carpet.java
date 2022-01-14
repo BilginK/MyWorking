@@ -24,9 +24,8 @@ public class Carpet {
         this.isPersian = isPersian;
 
         totalPrice= (width+length)*unitPrice;
-        if(this.isPersian==true){
-            totalPrice=totalPrice+200;
-
+         if(this.isPersian==true){
+            totalPrice= totalPrice+200;
 
         }
     }
