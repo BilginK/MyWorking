@@ -1,15 +1,15 @@
 package com.cybertek.tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utilities.WebDriverFactory;
+import com.cybertek.utilities.WebDriverFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -36,7 +36,7 @@ public class DropDownTest {
         WebElement username = driver.findElement(By.id("ctl00_MainContent_username"));
         username.sendKeys("Tester");
         WebElement password = driver.findElement(By.id("ctl00_MainContent_password"));
-        password.sendKeys("test");
+        password.sendKeys("test"+Keys.ENTER);
 
         WebElement loginbutton = driver.findElement(By.id("ctl00_MainContent_login_button"));
         Thread.sleep(2000);
@@ -54,8 +54,8 @@ public class DropDownTest {
 
         //Then select FamilyAlbum, make quantity 2, and click Calculate
         productDropDown.selectByVisibleText("FamilyAlbum");
-        WebElement quatityBox = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity"));
-        quatityBox.sendKeys("2");
+        WebElement quantityBox = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity"));
+        quantityBox.sendKeys("2");
 
         WebElement calculateButton = driver.findElement(By.cssSelector("input[type='submit']"));
         calculateButton.click();

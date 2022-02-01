@@ -8,18 +8,22 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utilities.WebDriverFactory;
+import com.cybertek.utilities.WebDriverFactory;
 
 import java.util.concurrent.TimeUnit;
 
 public class HomeWork {
 
     WebDriver driver;
+    WebDriver wait;
+
 
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+
 
     }
 
@@ -111,7 +115,7 @@ public class HomeWork {
     public void test5() throws InterruptedException {
         //click registration form
         driver.get("https://practice-cybertekschool.herokuapp.com");
-        driver.manage().window();
+
 
         Thread.sleep(1000);
         WebElement registration_form = driver.findElement(By.linkText("Registration Form"));
@@ -195,6 +199,24 @@ public class HomeWork {
         Assert.assertTrue(message.isDisplayed(), "You've successfully completed registration!");
 
 
+
+    }
+    @Test
+    public void test6(){
+        //1. Go to "https://www.tempmailaddress.com/"
+        driver.get("https://www.tempmailaddress.com/");
+
+        //2. Copy and save email as a string.
+        WebElement copyElement = driver.findElement(By.xpath("//a[@data-clipboard-action='copy'][2]"));
+        copyElement.click();
+
+//        wait.until(ExpectedConditions.elementToBeClickable(copyElement));
+//         System.out.println("copyElement.getText() = " + copyElement.getText());
+
+
+        //3.Then go to “https://practice-cybertekschool.herokuapp.com”
+//        driver.get("https://practice-cybertekschool.herokuapp.com");
+//        copyElement.click();
 
     }
 
