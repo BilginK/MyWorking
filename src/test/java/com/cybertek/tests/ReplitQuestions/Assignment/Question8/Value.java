@@ -1,4 +1,4 @@
-package com.cybertek.tests.Question8;
+package com.cybertek.tests.ReplitQuestions.Assignment.Question8;
 
 public class Value {
     /*
