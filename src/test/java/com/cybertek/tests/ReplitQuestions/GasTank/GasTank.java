@@ -6,6 +6,7 @@ public class GasTank {
     double capacity;
 
     public GasTank(double capacity) {
+
         this.capacity = capacity;
     }
     public void addGas(double a){
@@ -30,13 +31,15 @@ public class GasTank {
 
     }
     public boolean isFull(){
-        if(amount>capacity-0.1){
-            return true;
-        }else {
-            return false;
-        }
+//        if(amount>capacity-0.1){
+//            return true;
+//        }else {
+//            return false;
+//        }
+        return (amount>capacity-0.1);
     }
     public double getGasLevel(){
+
         return amount;
     }
     public double fillUp(){

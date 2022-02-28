@@ -38,9 +38,9 @@ public class Color {
          */
         public Color(int r, int g, int b) {
 
-            rgb[0] = r;
-            rgb[1] = g;
-            rgb[2] = b;
+            this.rgb[0] = r;
+            this.rgb[1] = g;
+            this.rgb[2] = b;
         }
 
         /**
